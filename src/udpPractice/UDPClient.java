@@ -21,7 +21,7 @@ public class UDPClient {
 			DatagramPacket request = new DatagramPacket(m,
 					m.length, aHost, serverPort);//construindo um pacotedo tipo datagrama para ser enviado ao servidor
 			aSocket.send(request);//enviando-o ao servidor
-			byte[] buffer = new byte[13];
+			byte[] buffer = new byte[1024];
 			DatagramPacket reply = new DatagramPacket(buffer,
 					buffer.length);
 			aSocket.receive(reply); //recebendo o pacote de resposta do servidor
